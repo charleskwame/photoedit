@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Photo Editor v1.0</title>
+	</head>
+	<body>
+		<div class="my-10 grid items-center justify-center">
+			<h1 class="mb-3 font-bold">Photo Editor v1.0</h1>
+			<div class="grid items-center justify-center gap-1">
+				<canvas id="canvas" class="max-w-xs border-2 border-gray-200 p-5"></canvas>
+
+				<!-- select image -->
+				<label for="input" class="text-lg font-semibold lg:text-xl">Select an image</label>
+				<input type="file" accept="image/*" id="selectedFile" />
+			</div>
+
+			<div class="mt-3 grid gap-1">
+				<!-- saturation -->
+				<div>
+					<label for="sliderSaturation" class="font-semibold">Saturation</label>
+					<div class="flex items-center gap-3">
+						<input type="range" min="0" max="10" step="2" id="sliderSaturation" class="w-full" />
+						<p id="saturationOutput"></p>
+					</div>
+				</div>
+
+				<!-- contrast -->
+				<div>
+					<label for="sliderSaturation" class="font-semibold">Contrast</label>
+					<div class="flex items-center gap-3">
+						<input type="range" min="0" max="10" step="2" id="sliderContrast" class="w-full" />
+						<p id="contrastOutput"></p>
+					</div>
+				</div>
+			</div>
+
+			<a href="" id="downloadLink" class="mt-5 rounded-lg bg-blue-500 py-4 text-center font-semibold text-white"> Download image </a>
+		</div>
+	</body>
+	<script src="./file.js"></script>
+</html>
